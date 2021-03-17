@@ -8,10 +8,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     menues = rol.momokara_roulette("単品の1000円")
-    title = "1000円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="メニュー")
+    return render_template("index.html",menues=menues,total=total,attribute="メニュー")
 
 @app.route("/tp500",methods=["GET"])
 def ac1():
