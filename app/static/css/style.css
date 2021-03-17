@@ -1,0 +1,77 @@
+body {
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans',YuGothic,'Yu Gothic',sans-serif;
+    background: #007c00;
+    text-align: center;
+}
+
+h1,h2 {
+    margin: 0;
+}
+.result{
+    text-align: center;
+}
+.box{
+    margin: 1em 0;
+    border-left: solid 6px rgba(0,124,0,1);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+}
+.menu {
+    padding: 0.5em 1em;
+    background: rgba(0,124,0,0.1);
+    border-bottom: 2px solid #007c00;
+}
+.menues {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.box h2 {
+    color: #d70002;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    padding: 5px;
+  }
+.rst {
+    padding: 1em 1em;
+    background: rgba(0,124,0,0.3);
+  }
+.page {
+    margin: 2em auto;
+    width: 35em;
+    border: 5px double #007c00;
+    padding: 1em;
+    background: white;
+  }
+.heading {
+    border-bottom: 2px solid #007c00;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+.buttonarea {
+    text-align: center;
+    display: inline-flex;
+  }
+
+.btn {
+    display: inline-block;
+    width: 10em;
+    padding: 1em 1em;
+    text-decoration: none;
+    background: rgba(0,124,0,0.8);
+    color: #ffffff;
+    border-bottom: solid 4px #007c00;
+    border-radius: 3px;
+  }
+
+.menuber{
+    text-align: left;
+    border-bottom: 1px solid #007c00;
+    margin-bottom: 1em;
+}
+.menuber p{
+    padding-left: 15px;
+}
+  

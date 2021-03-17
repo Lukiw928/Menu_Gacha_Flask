@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <title>ももからこーたろー</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+
+        <div class="page">
+            <div class="heading">
+                <h1>ももからこーたろー</h1>
+                <h1>{{attribute}}{{title}}ガチャ</h1>
+            </div>
+            <div class="menuber">
+                <p>定食・弁当あり</p>
+            </div>
+            <div class="buttonarea">
+                <form action="/TB500" method="GET">
+                    <input type="submit" value="500円" class="btn">
+                </form>
+                <form action="/TB750" method="GET">
+                    <input type="submit" value="750円" class="btn">
+                </form>
+                <form action="/TB1000" method="GET">
+                    <input type="submit" value="1000円" class="btn">
+                </form>
+            <br>
+            </div>
+            <div class="menuber">
+                <p>単品</p>
+            </div>
+            <div class = "buttonarea">
+                <form action="/tp500" method="GET">
+                    <input type="submit" value='500円' class="btn">
+                </form>
+                <form action="/tp750" method="GET">
+                    <input type="submit" value='750円' class="btn">
+                </form>
+                <form action="/tp1000" method="GET">
+                    <input type="submit" value='1000円' class="btn">
+                </form>
+            </div>
+                <div class = "result">
+                    <div class="box menu">
+                    {% for menu in menues %}
+                        <h2>{{menu}}</h2>
+                    {% endfor %}
+                    </div>
+                    <div class="box rst">
+                        <h2>{{total}}</h2>
+                    </div>
+                    
+                </div>
+        </div>
+            
+    </body>
+</html>
