@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request#,url_for
 # import os
 import roulette as rol
+import flask_devices
 
 app = Flask(__name__)
 
@@ -10,7 +11,11 @@ def index():
     menues = rol.momokara_roulette("単品の1000円")
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,attribute="メニュー")
+    print(request.DEVICE)
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,attribute="メニュー")
+    else:
+        return render_template("index.html",menues=menues,total=total,attribute="メニュー")
 
 @app.route("/tp500",methods=["GET"])
 def ac1():
@@ -18,7 +23,10 @@ def ac1():
     title = "500円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="単品")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
 
 @app.route("/tp750",methods=["GET"])
 def ac2():
@@ -26,7 +34,10 @@ def ac2():
     title = "750円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="単品")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
 
 @app.route("/tp1000",methods=["GET"])
 def ac3():
@@ -34,7 +45,10 @@ def ac3():
     title = "1000円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="単品")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="単品")
 
 @app.route("/TB500",methods=["GET"])
 def TB500():
@@ -42,7 +56,10 @@ def TB500():
     title = "500円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
 
 @app.route("/TB750",methods=["GET"])
 def TB750():
@@ -50,7 +67,10 @@ def TB750():
     title = "750円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
 
 @app.route("/TB1000",methods=["GET"])
 def TB1000():
@@ -58,7 +78,10 @@ def TB1000():
     title = "1000円"
     total = menues[-1]
     menues = menues[:-1]
-    return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    if request.DEVICE == "mobile":
+        return render_template("mobile_index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
+    else:
+        return render_template("index.html",menues=menues,total=total,title=title,attribute="定食・弁当")
 
 if __name__ == "__main__":
     app.run(debug=True)
